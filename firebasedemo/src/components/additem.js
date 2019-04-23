@@ -40,7 +40,9 @@ export default class AddItem extends Component{
     borderWidth:2,
     alignItems:'center'
 }}
-                    onChange={this.handleChange}
+                    onChange={(e)=>{
+                        this.setState({itemInfo:e.nativeEvent.text})
+                    }}
                     value={this.state.itemInfo}/>
                 <Button 
                 onPress={this.clickToAdd} 

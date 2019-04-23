@@ -1,10 +1,10 @@
 import React, {Component} from 'react';
 import {Platform, StyleSheet, Text, View} from 'react-native';
-import AddItem from './src/components/additem';
-import Registration from './src/components/registration';
-
-// import TopNav from '../components/TopNav';
+// import AddItem from './src/components/additem';
 import {Icon,Header} from 'react-native-elements';
+import Registration from './src/components/registerComponent';
+import Login from './src/components/LoginComponent';
+import RouterConfig from './src/routes/AppRouting';
 const instructions = Platform.select({
   ios: 'Press Cmd+R to reload,\n' + 'Cmd+D or shake for dev menu',
   android:
@@ -14,42 +14,17 @@ const instructions = Platform.select({
 
 
 export default class App extends Component {
-//   static navigationOptions=({navigation})=>{
-//     navigation.title='Home'
-// return{
-//     // headerLeft:<TopNav navigation={navigation}/>,
-//     // headerRight:<TopNavCart navigation={navigation}/>
-//     header:<TopNav navigation={navigation}/>
 
-// };
-// };
   render() {
     
       // <AddItem/>
       return (
-      <View>
-        <Registration/>
-        </View>
+      
+    
+          <RouterConfig/>
+    
         );
     
   }
 }
 
-// const styles = StyleSheet.create({
-//   container: {
-//     flex: 1,
-//     justifyContent: 'center',
-//     alignItems: 'center',
-//     backgroundColor: '#F5FCFF',
-//   },
-//   welcome: {
-//     fontSize: 20,
-//     textAlign: 'center',
-//     margin: 10,
-//   },
-//   instructions: {
-//     textAlign: 'center',
-//     color: '#333333',
-//     marginBottom: 5,
-//   },
-// });
